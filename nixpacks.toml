@@ -5,4 +5,4 @@ nixPkgs = ["python310"]  # Use python311 for 3.11
 cmds = ["python -m venv /opt/venv && . /opt/venv/bin/activate && pip install -r requirements.txt"]
 
 [start]
-cmd = "streamlit run app.py --server.port $PORT --server.address 0.0.0.0"
+cmd = "streamlit run app4.py --server.port $PORT --server.address 0.0.0.0"
