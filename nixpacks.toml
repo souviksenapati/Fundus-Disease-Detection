@@ -2,7 +2,7 @@
 nixPkgs = ["python310"]  # Use python311 for 3.11
 
 [phases.build]
-cmds = ["python -m venv /opt/venv && . /opt/venv/bin/activate && pip install -r requirements.txt"]
+cmds = ["RUN python -m venv /app/venv && . /app/venv/bin/activate && pip install -r requirements.txt"]
 
 [start]
 cmd = "streamlit run app4.py --server.port $PORT --server.address 0.0.0.0"
