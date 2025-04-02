@@ -5,4 +5,4 @@ ultralytics==8.1.0
 numpy==1.26.4
 opencv-python-headless==4.8.1.78
 pykalman==0.9.5
-concurrent.futures
+
