@@ -1,8 +1,12 @@
 [phases.setup]
-nixPkgs = ["python310"]  # Use python311 for 3.11
+nixPkgs = ["python310"]  # Use "python311" for Python 3.11
 
 [phases.build]
-cmds = ["RUN python -m venv /opt/venv && . /opt/venv/bin/activate && pip install -r requirements.txt"]
+cmds = [
+  "python -m venv /opt/venv",
+  ". /opt/venv/bin/activate",
+  "pip install -r requirements.txt"
+]
 
 [start]
-cmd = "/opt/venv/bin/python", "-m", "streamlit", "run", "app.py", "--server.port=8080", "--server.address=0.0.0.0"
+cmd = ["/opt/venv/bin/python", "-m", "streamlit", "run", "app4.py", "--server.port=8080", "--server.address=0.0.0.0"]
